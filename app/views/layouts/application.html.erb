@@ -14,8 +14,17 @@
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
     <% end %>
+    <%= render 'layouts/navigation' %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
     <%= javascript_include_tag "application" %>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.topbar.js"></script>
+    <script>
+    $(document).foundation();
+    </script>
   </body>
 </html>
 

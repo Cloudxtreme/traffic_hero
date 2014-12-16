@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   
+  root 'static_pages#home'
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
-  root 'static_pages#home'
+  delete '/logout', to: 'sessions#destroy', as: 'signout'
+
   match '/help',      to: 'static_pages#help',      via: 'get'
   match '/signup',    to: 'users#new',              via: 'get'
   match '/signin',    to: 'sessions#new',           via: 'get'
