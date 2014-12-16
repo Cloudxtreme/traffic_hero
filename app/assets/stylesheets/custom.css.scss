@@ -1,4 +1,41 @@
-// @import "settings";
+@import "settings";
+
+// Top-Bar Styling
+
+// Before
+.top-bar li a:not(.button) {
+    background:orange;
+    color: white;
+    }
+
+// After
+.top-bar li a:not(.button):hover {
+    background:white;
+    color: orange;
+    }
+
+// Before
+.top-bar ul li.active:not(.has-form) a:not(.button) {
+  background: orange;
+  color:white;
+  }
+// After
+.top-barul li.active > a {
+  background: white;
+  color: orange;
+}
+
+// Footer Styling
+.footer {
+    text-align: center;
+    color: white;
+    opacity: 0.6;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background: orange;
+}
 
 /* forms */
 #error_explanation {
