@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: traffic_hero_final_development
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: traffic_hero_final_test
+  pool: 5
