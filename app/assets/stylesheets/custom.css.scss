@@ -1,15 +1,23 @@
+// Background Image
+.background {
+  background-image: url("/assets/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 
 h1 {
   color: white !important;
 }
 
 .jumbotron {
-  background-color: orange;
+  background-color: #FF9900;
   width: 40%;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
   margin-top: 2%;
+  margin-bottom: 2%;
   padding-top: 2%;
   opacity: 0.6; 
   border-radius: 20%;
@@ -29,23 +37,23 @@ h1 {
 // Top-Bar Styling
 // Before
 .top-bar li a:not(.button) {
-    background:orange;
+    background: #FF6600;
     color: white;
     }
 // After
 .top-bar li a:not(.button):hover {
     background:white !important;
-    color: orange !important;
+    color: #FF6600 !important;
     }
 // Before
 .top-bar ul li.active:not(.has-form) a:not(.button) {
-  background: orange;
+  background: #FF6600;
   color:white;
   }
 // After
 .top-barul li.active > a {
   background: white;
-  color: orange;
+  color: #FF6600;
 }
 
 // Footer Styling
@@ -57,7 +65,7 @@ h1 {
     bottom: 0px;
     left: 0px;
     width: 100%;
-    background: orange;
+    background: #FF6600;
 }
 
 /* forms */

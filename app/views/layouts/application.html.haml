@@ -12,8 +12,9 @@
     - flash.each do |key, value|
       %div{:class => "alert alert-#{key}"}= value
     .banner
-      %img{:src => "assets/atlanta.jpg"}/  
+      %img{:src => "assets/atlanta.jpg"}/ 
     = render 'layouts/navigation'
-    = yield
-    = render 'layouts/footer'
-    = javascript_include_tag "application"
+    .background
+      = yield
+      / = render 'layouts/footer'
+      = javascript_include_tag "application"
