@@ -13,6 +13,9 @@ function initialize() {
         style: google.maps.ZoomControlStyle.LARGE,
         position: google.maps.ControlPosition.RIGHT_CENTER
     },
+    mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, CUSTOM_MAP_ID]
+    },
     MapTypeId: CUSTOM_MAP_ID
     // scrollwheel: false
   }
