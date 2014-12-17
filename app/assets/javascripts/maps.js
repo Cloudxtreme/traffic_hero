@@ -1,50 +1,53 @@
-var CUSTOM_MAP_ID = 'custom_style';
-
-// Custom Styling 
-var featureOpts = [
-  {
-    stylers: [
-      { hue: '#890000' },
-      { visibility: 'simplified' },
-      { gamma: 0.5 },
-      { weight: 0.5 }
-    ]
-  },
-  {
-    elementType: 'labels',
-    stylers: [
-      { visibility: 'off' }
-    ]
-  },
-  {
-    featureType: 'water',
-    stylers: [
-      { color: '#890000' }
-    ]
-  }
-];
+var map;
+var CUSTOM_MAP_ID = 'Red Alert';
 
 function initialize() {
+
   var mapOptions = {
     center: { lat: 33.748995, lng: -84.387982 },
     zoom: 10,
     mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, CUSTOM_MAP_ID]
     },
-    // TODO: this breaks it.
-    // MapTypeId: CUSTOM_MAP_ID; 
+    MapTypeId: CUSTOM_MAP_ID
     // scrollwheel: false
-  };
+  }
 
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
+    map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
+   var featureOpts = [
+    {
+      stylers: [
+        { hue: '#890000' },
+        { visibility: 'simplified' },
+        { gamma: 0.5 },
+        { weight: 0.5 }
+      ]
+    },
+    {
+      elementType: 'labels',
+      stylers: [
+        { visibility: 'off' }
+      ]
+    },
+    {
+      featureType: 'water',
+      stylers: [
+        { color: '#890000' }
+      ]
+    }
+  ];
+
   var styledMapOptions = {
-   name: 'custom_style' 
+   name: 'Red Alert' 
   };
 
   var trafficLayer = new google.maps.TrafficLayer();
   trafficLayer.setMap(map);
+
+  var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+  map.mapTypes.set(CUSTOM_MAP_ID, customMapType);
 
   // Try HTML5 geolocation
   if (navigator.geolocation) {
@@ -55,7 +58,7 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
-        content: 'Location found using HTML5.'
+        content: 'We found you!'
       });
 
       map.setCenter(pos);

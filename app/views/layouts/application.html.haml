@@ -1,15 +1,13 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}/
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     %title
       Traffic Hero | #{yield(:title)}
     = stylesheet_link_tag    "application"
     = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyD32oFCWtStoFQ9JzajCXErEoGQNMWlIts"
     = javascript_include_tag "application"
     = javascript_include_tag "vendor/modernizr"
-    
-
     = csrf_meta_tags
   %body
     #banner
