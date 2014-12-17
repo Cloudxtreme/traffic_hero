@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
+
   delete '/logout', to: 'sessions#destroy', as: 'signout'
 
   match '/help',      to: 'static_pages#help',      via: 'get'

@@ -1,6 +1,7 @@
 - provide(:title, 'Sign up')
-.jumbotron    
-  %h1 Sign up
+.jumbotron
+  %h1 Traffic Hero
+  %h2 Sign Up!
   .row
     .span6.offset3
       .form_container
@@ -15,3 +16,4 @@
           = f.label :password_confirmation, "Confirmation"
           = f.password_field :password_confirmation
           = f.submit "Create my account", class: "button radius"
+          = link_to "Sign In", signin_path
