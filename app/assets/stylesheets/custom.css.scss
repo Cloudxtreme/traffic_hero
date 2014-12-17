@@ -2,7 +2,10 @@
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700&effect=3d|3d-float");
 
 // Map
-#map-canvas { height: 100%; margin: 0; padding: 0;}
+#map-canvas { height: 100%; 
+  margin: 0; 
+  padding-right: 10;
+}
 
 // Banner
 #banner {
