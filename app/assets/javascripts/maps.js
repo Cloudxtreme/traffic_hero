@@ -6,8 +6,12 @@ function initialize() {
   var mapOptions = {
     center: { lat: 33.748995, lng: -84.387982 },
     zoom: 10,
-    mapTypeControlOptions: {
-      mapTypeIds: [google.maps.MapTypeId.ROADMAP, CUSTOM_MAP_ID]
+    panControl: true,
+    scaleControl: true,
+    zoomControl: true,
+    zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.LARGE,
+        position: google.maps.ControlPosition.RIGHT_CENTER
     },
     MapTypeId: CUSTOM_MAP_ID
     // scrollwheel: false

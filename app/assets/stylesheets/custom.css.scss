@@ -6,6 +6,8 @@
   margin: 0; 
   padding-right: 10;
 }
+// Makes Map Controls Render Correctly
+.gmnoprint img { max-width: none; }
 
 // Banner
 #banner {
@@ -111,6 +113,7 @@
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
     font-size: 28px;
+    text-shadow: 4px 4px 4px black;
     }
 // After
 .top-bar li a:not(.button):hover {
@@ -119,6 +122,7 @@
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
     font-size: 28px;
+    text-shadow: 4px 4px 4px black;
     }
 // Before
 .top-bar ul li.active:not(.has-form) a:not(.button) {
@@ -127,6 +131,7 @@
   font-family: 'Droid Sans', sans-serif;
   font-weight: 700;
   font-size: 28px;
+  text-shadow: 4px 4px 4px black;
   }
 // After
 .top-bar ul li.active > a {
@@ -135,6 +140,7 @@
   font-family: 'Droid Sans', sans-serif;
   font-weight: 700;
   font-size: 18px;
+  text-shadow: 4px 4px 4px black;
 }
 
 /* forms */
