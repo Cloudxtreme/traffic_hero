@@ -11,8 +11,10 @@
   %body
     - flash.each do |key, value|
       %div{:class => "alert alert-#{key}"}= value
-    .banner 
-      %img{:src => "assets/atlanta.jpg"}/
+    #banner
+      %img#image{:src => "/assets/atlanta.jpg"}/
+      %h1.font-effect-3d
+        Traffic Hero  
     = render 'layouts/navigation'
     .container
       = yield

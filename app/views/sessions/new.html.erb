@@ -1,6 +1,5 @@
 <% provide(:title, "Sign in") %>
-
-<div class="container">  
+ 
   <div class="jumbotron">
     <div class="form_container">
       <div class="span6 offset3">
@@ -10,19 +9,17 @@
 
         <%= form_for(:session, url: sessions_path) do |f| %>
 
-          <%= f.label :email %>
-          <%= f.text_field :email %>
+          <%= f.label :email, :class => "form_email" %>
+          <%= f.text_field :email, :class => "form_input" %>
 
-          <%= f.label :password %>
-          <%= f.password_field :password %>
+          <%= f.label :password, :class => "form_password" %>
+          <%= f.password_field :password, :class => "form_input" %>
 
           <%= f.submit "Sign in", class: "radius button" %>
         <% end %>
-
-        <br />
-        <p><h3>New user? <%= link_to "Sign up now!", signup_path %></h3></p>
+        <p>New user? 
+          <%= link_to "Create an account!", signup_path %></p>
         <br />
       </div>
     </div>
   </div>
-</div>

@@ -1,6 +1,26 @@
 // Fonts
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700&effect=3d|3d-float");
 
+// Banner
+#banner {
+  position:relative;
+}
+#image {    
+  position:relative;
+  width: 100%;
+}
+.font-effect-3d { 
+  z-index:100;
+  position:absolute;    
+  color: white;
+  font-family: 'Droid Sans', sans-serif;
+  text-shadow: 4px 4px 4px black; 
+  font-size:80px;
+  font-weight:700;
+  left:1%;
+  top:-7%;
+}
+
 // Background Image
 .container {
   background-image: url("/assets/background.jpg");
@@ -16,7 +36,7 @@
   text-align: center;
   margin-right: auto;
   margin-left: auto;
-  // margin-top: 2%;
+  margin-top: 2%;
   margin-bottom: 2%;
   padding-top: 2%;
   opacity: 0.9; 
@@ -44,6 +64,13 @@
   font-size: 30px;
   text-shadow: 6px 6px 6px black;
 }
+.jumbotron p {
+  color: white;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  text-shadow: 6px 6px 6px black;
+}
 
 // Signup form div 
 .form_container {
@@ -55,27 +82,53 @@
   padding-top: 5%;
   color: white;
 }
+.form_email {
+  color: white;
+  font-family: 'Droid Sans', sans-serif;
+  text-shadow: 6px 6px 6px black;
+  font-weight: 400;
+  font-size: 32px;
+}
+.form_password {
+  color: white;
+  font-family: 'Droid Sans', sans-serif;
+  text-shadow: 6px 6px 6px black;
+  font-weight: 400;
+  font-size: 32px;
+}
 
 // Top-Bar Styling
 // Before
 .top-bar li a:not(.button) {
     background: #FF6600;
     color: white;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
     }
 // After
 .top-bar li a:not(.button):hover {
     background:white !important;
     color: #FF6600 !important;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
     }
 // Before
 .top-bar ul li.active:not(.has-form) a:not(.button) {
   background: #FF6600;
   color:white;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
   }
 // After
-.top-barul li.active > a {
+.top-bar ul li.active > a {
   background: white;
   color: #FF6600;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 // Footer Styling
