@@ -17,7 +17,7 @@
   position:relative;
   width: 100%;
 }
-.font-effect-3d { 
+.font-effect-3d-float { 
   z-index:100;
   position:absolute;    
   color: white;
@@ -35,6 +35,8 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  padding-top: 0.5%;
+  padding-bottom: 1%;
 }
 
 // Jumbotron Styling

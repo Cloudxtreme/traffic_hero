@@ -1,0 +1,17 @@
+- provide(:title, "Sign in")
+.jumbotron
+  .form_container
+    .span6.offset3
+      %br/
+      %h1 Sign in
+      %br/
+      = form_for(:session, url: sessions_path) do |f|
+        = f.label :email, :class => "form_email"
+        = f.text_field :email, :class => "form_input"
+        = f.label :password, :class => "form_password"
+        = f.password_field :password, :class => "form_input"
+        = f.submit "Sign in", class: "radius button"
+      %p
+        New user?
+        \#{link_to "Create an account!", signup_path}
+      %br/
