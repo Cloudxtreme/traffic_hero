@@ -1,5 +1,8 @@
 - provide(:title, @user.name)
 .jumbotron
-  %h1= @user.name
   %h2 Profile
   %br/
+  %p= @user.name
+  %p= @user.email
+  %br/
+  \#{link_to "Edit your Profile", edit_user_path}

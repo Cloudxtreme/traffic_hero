@@ -1,13 +1,16 @@
 <div class="jumbotron">
   <%= form_tag traffic_index_path, :method => 'get' do %>
+      <h3>Origin:</h3>
       <%= text_field_tag :origin, params[:origin] %>
+      <h3>Destination:</h3>
       <%= text_field_tag :destination, params[:destination] %>
-      <%= submit_tag "Search", :name => nil %>
+      <%= submit_tag "Search", :class => 'radius button' %>
   <% end %>
 
   <% if @travel_info %>
-    <p>Congestion:  <%= @travel_info[:traffic_congestion] %></p>
-    <p>Distance:    <%= @travel_info[:travel_distance] %></p>
-    <p>Time:        <%= @travel_info[:traffic_time] %></p>
+    <p>As of <b><%= Time.now.strftime("%I:%M %Z") %></b>,</p> 
+    <p>Traffic congestion is <b><%= @travel_info[:traffic_congestion] %></b>.</p>
+    <p>To travel <b><%= @travel_info[:travel_distance]  %></b> miles,</p>
+    <p>Your time in traffic is <b><%= @travel_info[:traffic_time] %></b> minutes.</p>
   <% end %>
 </div>

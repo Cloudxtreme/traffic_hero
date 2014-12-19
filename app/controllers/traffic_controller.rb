@@ -1,6 +1,7 @@
 class TrafficController < ApplicationController
+  before_action :signed_in_user
+
   def index
-    logger.debug("TrafficController:index")
     @origin = params[:origin]
     @destination = params[:destination]
     if @origin && @destination
@@ -9,7 +10,12 @@ class TrafficController < ApplicationController
   end
 
   def show
-    logger.debug("TrafficController:show")
     @travel_info = Traffic.route_details(params[:origin], params[:destination])
   end
+
+  private
+
+    def signed_in_user
+      redirect_to signin_url, notice: "Please sign in." unless signed_in?
+    end
 end

@@ -37,18 +37,21 @@
 // Jumbotron Styling
 .jumbotron {
   background-color: #FF9900;
-  width: 40%;
-  height: 90%;
+  width: 45%;
+  height: 100%;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: auto;
-  padding-top: 2%;
+  margin-top: auto;
+  margin-bottom: -5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   opacity: 0.9; 
   border-radius: 25%;
   box-shadow: 20px 20px 20px;
 }
-
 .jumbotron h1 {
   color: white;
   font-family: 'Droid Sans', sans-serif;

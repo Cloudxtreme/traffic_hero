@@ -2,9 +2,7 @@
 .jumbotron
   .form_container
     .span6.offset3
-      %br/
       %h1 Sign in
-      %br/
       = form_for(:session, url: sessions_path) do |f|
         = f.label :email, :class => "form_email"
         = f.text_field :email, :class => "form_input"
@@ -14,4 +12,3 @@
       %p
         New user?
         \#{link_to "Create an account!", signup_path}
-      %br/
