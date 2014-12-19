@@ -22,4 +22,4 @@ Traffic Hero was built as a final project for [General Assembly](https://general
 
 
 ##Links
-* [Traffic Herop GitHub](http://github.com/sabsowitz/traffic_hero_final)
+* [Traffic Heroku GitHub](http://github.com/sabsowitz/traffic_hero_final)
