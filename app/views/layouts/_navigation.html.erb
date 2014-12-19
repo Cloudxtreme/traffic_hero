@@ -11,17 +11,17 @@
     <!-- Right Nav Section -->
     <ul class="right">
       <% if signed_in? %>
-        <li class="active"><%= link_to "TRAFFIC!", maps_show_path %></li>
-        <li class="active"><%= link_to "MY DRIVE", traffic_index_path %></li>
-        <li class="has-dropdown">
-          <a href="#">Menu</a>
-          <ul class="dropdown">
-            <li><%= link_to "Profile", current_user %></li>
-            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-            <li><%= link_to "Logout", signout_path, method: "delete" %></li>
-          </ul>
-        </li>
-      </ul>
+          <li class="active"><%= link_to "TRAFFIC!", maps_show_path %></li>
+          <li class="active"><%= link_to "MY DRIVE", traffic_index_path %></li>
+          <li class="has-dropdown">
+            <a href="#">Menu</a>
+            <ul class="dropdown">
+              <li><%= link_to "Profile", current_user %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li><%= link_to "Logout", signout_path, method: "delete" %></li>
+            </ul>
+          </li>
+        </ul>
       <% else %>
         <li><%= link_to "Login", signin_path %></li>
         <li><%= link_to "Sign Up", signup_path %></li>

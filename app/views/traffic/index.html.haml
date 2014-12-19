@@ -1,0 +1,25 @@
+- provide(:title, 'My Drive')
+.jumbotron
+  = form_tag traffic_index_path, :method => 'get' do
+    %h3 Origin:
+    = text_field_tag :origin, params[:origin]
+    %h3 Destination:
+    = text_field_tag :destination, params[:destination]
+    = submit_tag "Search", :class => 'radius button'
+  - if @travel_info
+    %p
+      As of
+      = succeed "," do
+        %b= Time.now.strftime("%I:%M %Z")
+    %p
+      Traffic congestion is
+      = succeed "." do
+        %b= @travel_info[:traffic_congestion]
+    %p
+      To travel
+      %b= @travel_info[:travel_distance]
+      miles,
+    %p
+      Your time in traffic is
+      %b= @travel_info[:traffic_time]
+      minutes.
