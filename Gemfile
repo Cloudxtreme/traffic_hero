@@ -5,12 +5,14 @@ gem 'pg'
 gem 'pry'
 gem 'httparty'
 gem 'haml-rails', '>= 0.3.4', :group => :development
+gem 'rails_12factor', group: :production
 gem 'foundation-rails'
 gem 'sass-rails', '~> 4.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'unicorn'
 gem 'bcrypt', '~> 3.1.7'
+gem 'uglifier'
 
 group :development, :test do
   gem 'capybara'
