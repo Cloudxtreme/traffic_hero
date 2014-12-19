@@ -1,0 +1,22 @@
+/ .row
+/   .col-md-4
+/     %h3 AUTOCOMPLETE
+/     %form#places_form.row{:role => "search"}
+/       .form-group
+/         %input#autocomplete.form-control{:placeholder => "Search", :type => "text"}/
+/     %h3 DIRECTIONS
+/     %form#directions_form.navbar-left{:role => "search"}
+/       .form-group
+/         %input#directions_from.form-control{:placeholder => "From", :type => "text"}/
+/       .form-group
+/         %input#directions_to.form-control.col-md-2{:placeholder => "To", :type => "text"}/
+/       .form-group
+/         %button.btn.btn-default{:type => "submit"} Submit
+  
+/     %h3 GEOLOCATION
+/     %button#current_position.btn.btn-default Show my position
+/ .div
+/   #map-container
+/     #googleMap
+/   #directions-container
+/     #directions-panel
