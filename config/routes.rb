@@ -1,23 +1,26 @@
 Rails.application.routes.draw do
 
-  root 'users#new'
+    root 'application#index'
+    get '*path' => 'application#index'
 
-  get 'directions/index'
-  get 'directions/show'
+  # root 'users#new'
 
-  resources :users
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :traffic
+  # get 'directions/index'
+  # get 'directions/show'
 
-  match '/signup',    to: 'users#new',              via: 'get'
-  match '/signin',    to: 'sessions#new',           via: 'get'
-  delete '/logout', to: 'sessions#destroy',         as: 'signout'
+  # resources :users
+  # resources :sessions, only: [:new, :create, :destroy]
+  # resources :traffic
 
-  match '/help',      to: 'static_pages#help',      via: 'get'
-  match '/about',     to: 'static_pages#about',     via: 'get'
-  match '/contact',   to: 'static_pages#contact',   via: 'get'
+  # match '/signup',    to: 'users#new',              via: 'get'
+  # match '/signin',    to: 'sessions#new',           via: 'get'
+  # delete '/logout', to: 'sessions#destroy',         as: 'signout'
+
+  # match '/help',      to: 'static_pages#help',      via: 'get'
+  # match '/about',     to: 'static_pages#about',     via: 'get'
+  # match '/contact',   to: 'static_pages#contact',   via: 'get'
   
-  match '/maps/show',  to: 'maps#show',              via: 'get'
+  # match '/maps/show',  to: 'maps#show',              via: 'get'
 
   # match '/traffic/index', to: 'traffic#index',        via: 'get'  
 end

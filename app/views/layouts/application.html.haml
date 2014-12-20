@@ -1,19 +1,21 @@
-%html{:lang => "en"}
+%html{"ng-app" => "Traffic Hero", "ng-controller" => "AppController"}
   %head
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     %title
       Traffic Hero | #{yield(:title)}
     = stylesheet_link_tag    "application"
-    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?&key=AIzaSyD32oFCWtStoFQ9JzajCXErEoGQNMWlIts"
+    / = javascript_include_tag "https://maps.googleapis.com/maps/api/js?&key=AIzaSyD32oFCWtStoFQ9JzajCXErEoGQNMWlIts"
     = javascript_include_tag "application"
-    = javascript_include_tag "vendor/modernizr"
+    / = javascript_include_tag "vendor/modernizr"
     = csrf_meta_tags
-  %body
-    #banner
-      %img#image{:src => "/assets/atlanta.jpg"}/
-      %h1.font-effect-3d-float
-        Traffic Hero  
-    = render 'layouts/navigation'
-    .container
-      = yield
+    %script{:src => "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js", :type => "text/javascript"}
+    :cdata
+  %body{"ng-app" => "Traffic Hero"}
+    / #banner
+    /   %img#image{:src => "/assets/atlanta.jpg"}/
+    /   %h1.font-effect-3d-float
+    /     Traffic Hero  
+    / = render 'layouts/navigation'
+    / .container
+  = yield

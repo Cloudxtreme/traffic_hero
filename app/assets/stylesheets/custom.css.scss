@@ -2,28 +2,34 @@
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700&effect=3d|3d-float");
 
 // Map
-#map-canvas { height: 100%; }
+
+#map-canvas {
+  height: 100%;
+}
+
 // Makes Map Controls Render Correctly
-.gmnoprint img { max-width: none; }
+.gmnoprint img {
+  max-width: none;
+}
 
 // Banner
 #banner {
-  position:relative;
+  position: relative;
 }
-#image {    
-  position:relative;
+#image {
+  position: relative;
   width: 100%;
 }
-.font-effect-3d-float { 
-  z-index:100;
-  position:absolute;    
+.font-effect-3d-float {
+  z-index: 100;
+  position: absolute;
   color: white;
   font-family: 'Droid Sans', sans-serif;
-  text-shadow: 4px 4px 4px black; 
-  font-size:80px;
-  font-weight:700;
-  left:1%;
-  top:-7%;
+  text-shadow: 4px 4px 4px black;
+  font-size: 80px;
+  font-weight: 700;
+  left: 1%;
+  top: -7%;
 }
 
 // Background Image
@@ -48,64 +54,51 @@
   padding-right: 5%;
   padding-top: 5%;
   padding-bottom: 5%;
-  opacity: 0.9; 
+  opacity: 0.9;
   border-radius: 25%;
   box-shadow: 20px 20px 20px;
-}
-.jumbotron h1 {
-  color: white;
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: 700;
-  font-size: 60px;
-  text-shadow: 8px 8px 8px black;
-}
-.jumbotron h2 {
-  color: white;
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: 400;
-  font-size: 50px;
-  text-shadow: 6px 6px 6px black;
-}
-.jumbotron .form_container h3 {
-  color: white;
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: 400;
-  font-size: 30px;
-  text-shadow: 6px 6px 6px black;
-}
-.jumbotron h3 {
-  color: white;
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: 400;
-  font-size: 30px;
-  text-shadow: 6px 6px 6px black;
-}
-.jumbotron p {
-  color: white;
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: 400;
-  font-size: 26px;
-  text-shadow: 6px 6px 6px black;
+  h1 {
+    color: white;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    text-shadow: 8px 8px 8px black;
+  }
+  h2 {
+    color: white;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    text-shadow: 6px 6px 6px black;
+  }
+  .form_container h3, h3 {
+    color: white;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-shadow: 6px 6px 6px black;
+  }
+  p {
+    color: white;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    text-shadow: 6px 6px 6px black;
+  }
 }
 
-// Signup form div 
+// Signup form div
 .form_container {
   width: 50%;
   height: auto;
-  margin-left: auto ;
-  margin-right: auto ;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 5%;
   padding-top: 5%;
   color: white;
 }
-.form_email {
-  color: white;
-  font-family: 'Droid Sans', sans-serif;
-  text-shadow: 6px 6px 6px black;
-  font-weight: 400;
-  font-size: 32px;
-}
-.form_password {
+
+.form_email, .form_password {
   color: white;
   font-family: 'Droid Sans', sans-serif;
   text-shadow: 6px 6px 6px black;
@@ -115,40 +108,41 @@
 
 // Top-Bar Styling
 // Before
-.top-bar li a:not(.button) {
+.top-bar {
+  li a:not(.button) {
     background: #FF6600;
     color: white;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
     font-size: 28px;
     text-shadow: 4px 4px 4px black;
+    &:hover {
+      background: white !important;
+      color: #FF6600 !important;
+      font-family: 'Droid Sans', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      text-shadow: 4px 4px 4px black;
     }
-// After
-.top-bar li a:not(.button):hover {
-    background:white !important;
-    color: #FF6600 !important;
-    font-family: 'Droid Sans', sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    text-shadow: 4px 4px 4px black;
-    }
-// Before
-.top-bar ul li.active:not(.has-form) a:not(.button) {
-  background: #FF6600;
-  color:white;
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  text-shadow: 4px 4px 4px black;
   }
-// After
-.top-bar ul li.active > a {
-  background: white;
-  color: #FF6600;
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  text-shadow: 4px 4px 4px black;
+  ul li.active {
+    &:not(.has-form) a:not(.button) {
+      background: #FF6600;
+      color: white;
+      font-family: 'Droid Sans', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      text-shadow: 4px 4px 4px black;
+    }
+    > a {
+      background: white;
+      color: #FF6600;
+      font-family: 'Droid Sans', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      text-shadow: 4px 4px 4px black;
+    }
+  }
 }
 
 /* forms */
