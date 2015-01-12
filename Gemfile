@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0.rc2'
 gem 'httparty'
 gem 'haml-rails', '>= 0.3.4', :group => :development
-gem 'rails_12factor', group: :production
 gem 'foundation-rails'
 gem 'sass-rails', '~> 4.0'
 gem 'jquery-rails'
@@ -19,5 +18,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
+  gem 'unicorn'
 end
 
