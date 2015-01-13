@@ -11,6 +11,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'uglifier'
 
 group :development, :test do
+  gem 'capistrano-rails'
   gem 'capybara'
   gem 'rspec-rails'
   gem 'database_cleaner', :git => 'git://github.com/bmabey/database_cleaner.git'
