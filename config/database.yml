@@ -9,3 +9,7 @@ test:
   encoding: unicode
   database: traffic_hero_final_test
   pool: 5
+
+production:
+  adapter: postgresql
+  database: traffic_hero_production

@@ -1,4 +1,4 @@
-root = "/opt/www/traffichero/current"
+root = "/home/rails"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"

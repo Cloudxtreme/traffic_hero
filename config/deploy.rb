@@ -1,8 +1,9 @@
 set :application, 'traffic_hero'
 set :repo_url, 'git@github.com:sabsowitz/traffic_hero_final.git'
-set :deploy_to, '/opt/www/traffic_hero'
-set :user, 'deploy'
+set :deploy_to, '/home/rails/'
+set :user, 'Prometheus'
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets}
+set :tmp_dir, "/home/rails/tmp"
 
 namespace :deploy do
 
